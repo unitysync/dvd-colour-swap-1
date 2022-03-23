@@ -1,0 +1,24 @@
+import pygame, sys 
+ from pygame.locals import * 
+ pygame.init() 
+ gameDisplay=pygame.display.set_mo de((800,600))
+ pygame.display.set_caption ("DVD_white_png.png")
+ time.sleep(3)
+ gameDisplay=pygame.display.set_mo de((600,600)) 
+ pygame.display.set_caption ("dvd blue white.png")
+
+
+
+
+
+clock = pygame.time.Clock()
+fps = 60
+attack_timer = 0
+attack_duration = 750 #milliseconds
+
+#in main loop
+dt = clock.tick(fps) #ms since last time tick was called
+for event in pygame.event.get():
+    if event.type == pygame.KEYUP:
+        if event.key == p.K_a:
+            attack_timer += attack_duration

@@ -1,0 +1,78 @@
+import pygame, time#
+
+
+def sleep():
+	pygame.time.wait(1000)
+
+
+pygame.init()
+width, height = 800, 600
+dvdLogoSpeed = [1, 1]#speed
+backgroundColor = 0, 0, 0#background and speed
+
+
+screen = pygame.display.set_mode((width, height))
+
+dvdlogo2 = pygame.image.load("DVD_white_png.png")
+
+while False:
+  def timer():
+     global timerdone
+     print("5")
+     sleep()
+     print ("4")
+     sleep()
+     print ("3")
+     sleep()
+     print ("2")
+     sleep()
+     print ("1")
+     sleep()
+     return True
+		 
+	def timerdone:
+	  timer()
+
+
+
+
+     if timerdone == True:
+	     dvdLogo = pygame.image.load("DVD_white_png.png")
+     else:
+       dvdLogo = pygame.image.load("DVD_blue black 2.png")
+
+
+
+
+
+dvdLogo = pygame.image.load("DVD_blue black 2.png")
+dvdLogoRect = dvdLogo.get_rect()#logo
+dvdLogo2Rect = dvdlogo2.get_rect()
+
+while True:
+    screen.fill(backgroundColor)
+
+    screen.blit(dvdLogo, dvdLogoRect)
+    dvdLogoRect = dvdLogoRect.move(dvdLogoSpeed)
+		
+
+    if dvdLogoRect.left < 0 or dvdLogoRect.right > width:
+        dvdLogoSpeed[0] = -dvdLogoSpeed[0] 
+				#
+				#
+    if dvdLogoRect.top < 0 or dvdLogoRect.bottom > height:
+        dvdLogoSpeed[1] = -dvdLogoSpeed[1]#borders and tracker
+				#
+				#
+
+        	
+
+    pygame.display.flip()
+    pygame.time.wait(10)#more speed
+
+
+
+
+
+print ("Made by Luke Russell, Peter Marsland, Oliver Brayshaw, Eddie Dunsire")
+# created by Luke Russell, Peter Marsland, Oliver Brayshaw, Eddie Dunsire
